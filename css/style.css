@@ -1152,4 +1152,243 @@ header h1 {
 .verification-wechat:hover {
     background: rgba(0, 255, 0, 0.15);
     cursor: pointer;
+}
+
+/* 移动端响应式样式 */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .chat-messages {
+        height: calc(100vh - 250px);
+        padding: 10px;
+    }
+
+    .message {
+        max-width: 95%;
+        padding: 8px 12px;
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
+
+    .input-area {
+        padding: 10px;
+    }
+
+    #user-input {
+        font-size: 16px;
+        padding: 8px;
+        height: 50px;
+    }
+
+    #send-button {
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    .warning-content {
+        padding: 20px;
+        margin: 10px;
+        max-width: 100%;
+    }
+
+    .warning-header {
+        font-size: 20px;
+    }
+
+    .warning-text {
+        font-size: 14px;
+    }
+
+    .warning-text ol {
+        padding-left: 25px;
+        max-width: 100%;
+    }
+
+    .verification-section {
+        padding: 15px;
+    }
+
+    .verification-input {
+        width: 90%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .verification-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .verify-button, .cancel-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .startup-content {
+        padding: 15px;
+    }
+
+    .startup-header {
+        font-size: 1.5em;
+    }
+
+    .startup-text {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+
+    .startup-warning {
+        font-size: 1em;
+    }
+
+    .startup-button {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+
+    .analysis-progress {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .progress-bar {
+        height: 15px;
+    }
+
+    .analysis-section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .analysis-section h2 {
+        font-size: 1.2em;
+    }
+
+    .analysis-section h3 {
+        font-size: 1.1em;
+    }
+
+    .timeline-event {
+        padding: 0 !important;
+        margin-bottom: 20px;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .event-time {
+        margin-left: 30px;
+        font-size: 14px;
+    }
+
+    .event-content {
+        margin-left: 30px;
+        padding: 12px;
+    }
+
+    .pattern-content {
+        padding: 12px;
+    }
+
+    .pattern-item h3 {
+        font-size: 1em;
+    }
+
+    .pattern-item p {
+        font-size: 14px;
+    }
+
+    .verification-wechat {
+        font-size: 14px;
+        padding: 8px;
+        margin: 12px 0;
+    }
+
+    .verification-hint {
+        font-size: 12px;
+    }
+
+    /* 优化触摸体验 */
+    button, 
+    input[type="text"], 
+    textarea {
+        min-height: 44px;
+    }
+
+    /* 增加点击区域 */
+    .verification-wechat,
+    .startup-button,
+    .verify-button,
+    .cancel-button {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* 优化滚动体验 */
+    .chat-messages,
+    .analysis-container {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* 针对超小屏幕设备的优化 */
+@media screen and (max-width: 320px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    .warning-header {
+        font-size: 18px;
+    }
+
+    .warning-text {
+        font-size: 13px;
+    }
+
+    .verification-input {
+        font-size: 14px;
+    }
+
+    .startup-text {
+        font-size: 0.9em;
+    }
+}
+
+/* 优化横屏显示 */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .chat-messages {
+        height: calc(100vh - 150px);
+    }
+
+    .warning-content {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .startup-content {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}
+
+/* 优化暗色模式 */
+@media (prefers-color-scheme: dark) {
+    .verification-input {
+        background: #222;
+        border-color: #444;
+    }
+
+    .warning-content {
+        background: #111;
+    }
 } 
